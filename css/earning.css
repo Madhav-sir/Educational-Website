@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    text-decoration: none;
+}
+
+html {
+    font-size: calc(100vw / 83)
+}
+
+.chain {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+}
+.chain i{
+    font-size: 6rem;
+    color: #0006785e;
+}
+.user{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid; */
+}
+.user img{
+    width: 100%;
+}
+.light{    
+    opacity: 0.5;
+}
+.user span {
+    width: 10rem;
+    text-align: center;rgin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user div{
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    color: #043474;
+    font-weight: 500;
+}
+.user>div> span{
+    color: #2797ff;
+}

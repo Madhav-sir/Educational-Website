@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+html {
+    font-size: calc(100vw / 83)
+}
+
+.container {
+    display: flex;
+    padding: 3vh 15vw;
+    min-height: 94vh;
+}
+
+.option {
+    width: 18rem;
+    padding: 1rem 0;
+    padding-bottom: 2rem;
+    border: 2px solid #ccc;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.dp{
+    height: 10.5rem;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1.2px solid #aaa;
+}
+.pic{
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    font-weight: 600;
+    color: #222;
+    background-color: #bdd;
+    border: 2px solid #444;
+    border-radius: 50%;
+}
+.select {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    /* border: 1px solid; */
+}
+.select :nth-child(2){
+    margin-left: 0.3rem;
+}
+.select :nth-child(3){
+    right: 1rem;
+    position: absolute;
+}
+.inside {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-left: 0px solid;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.back{
+    display: none;
+}
+.profile {
+    width: 60%;
+    padding: 0.4rem 2.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile label {
+    margin-top: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.profile input, .profile select{
+    margin-top: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.profile button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #09f;
+    border: 1px solid rgb(0, 134, 167);
+    border-radius: 0.5rem;
+}
+
+.bank{
+    position: relative;
+    padding: 0.2rem 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #000278c7;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+.record{
+    margin-top: 1rem;
+    padding: 0.8rem 0.5rem;
+    border: 1.5px solid #aaa;
+    border-radius: 0.5rem;
+}
+.record div{
+    display: inline;
+    color: #05b;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid;
+}
+.bank p{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.cancel{
+    position: absolute;
+    top: 0.2rem;
+    right: 1.2rem;
+    font-size: 2.5rem;
+}
+.or{
+    position: relative;
+    top: 0.8rem;
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+}
+.bank_form{
+    width: 50%;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+}
+.bank_form span{
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    color: #000;
+}
+.bank_form input{
+    margin-top: 0.4rem;
+    margin-bottom: 0.8rem;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+}
+.update{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border: 1px solid #06f;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0af;
+}
+.change{
+    padding: 1rem 2rem;
+    padding-bottom: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.change div{
+    margin-bottom: 1.5rem;
+}
+.change p{
+    padding-bottom: 0.7rem;
+}
+.change div div{
+    display: inline;
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.1rem;
+    border: 1px solid #55f;
+    border-radius: 0.3rem;
+    color: #fff;
+    background-color: #09f;
+}

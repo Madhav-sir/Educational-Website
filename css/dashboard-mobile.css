@@ -1,0 +1,209 @@
+@media (max-width: 500px) {
+    html {
+        font-size: calc(100vw / 28);
+    }
+
+    /* ====== Header Part Starts ====== */
+    /* ====== Header Part Starts ====== */
+    /* ====== Header Part Starts ====== */
+    .upper-nav {
+        display: none;
+    }
+
+    .hide-nav {
+        transform: translateX(-110%);
+    }
+
+    .sec-nav {
+        min-height: 2.5rem;
+        padding-top: 0.2rem;
+        border-bottom: 0.001rem solid #aaa;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8614904579996061) 0%, rgba(255, 255, 255, 0.8054680490360207) 93%, rgba(255, 255, 255, 0.50014592018448) 100%);
+        position: relative;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .sec-nav i {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .sec-logo {
+        position: relative;
+        top: -0.1rem;
+        height: 36px;
+        overflow: hidden;
+    }
+
+    .sec-logo img {
+        margin-left: 3rem;
+        height: 100%;
+    }
+
+    .sec-login {
+        margin-top: 0.1rem;
+        margin-right: 0.9rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .sec-login span {
+        position: relative;
+        left: 0.3rem;
+    }
+    .sec-login i {
+        font-size: 1.6rem;
+    }
+
+    .blank-nav {
+        position: fixed;
+        z-index: 90;
+        display: none;
+        height: 110vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .side-nav {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        width: 45vw;
+        height: 110vh;
+        border-right: 1px solid;
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logos {
+        padding-left: 8px;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.01rem solid #ccc;
+    }
+
+    .logos img {
+        margin-top: -0.2rem;
+        margin-left: -0.15rem;
+        height: 90%;
+    }
+
+    .logos i:nth-child(2) {
+        margin-top: 0.4rem;
+        position: absolute;
+        right: 8px;
+        font-size: 1.4rem;
+    }
+
+    .profile {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile a {
+        color: #42406ad2;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        font-size: 5.5rem;
+    }
+
+    .profile span {
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: flex;
+        column-gap: 0.4rem;
+    }
+
+    .profile span i {
+        margin-top: 0.1rem;
+        color: #150997;
+        font-size: 1rem;
+    }
+
+    .menus {
+        margin-top: 0.5rem;
+        padding-left: 0.7rem;
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.55rem;
+    }
+
+    .pages {
+        margin-left: 6px;
+        font-size: 1.1rem;
+    }
+
+    .hidden-pages {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        margin-left: 0.7rem;
+        padding-left: 6px;
+        border-left: 2px solid #bbb;
+        font-size: 1rem;
+        display: none;
+        flex-direction: column;
+        row-gap: 4px;
+    }
+
+
+    /* ====== Header Part Ends ====== */
+    /* ====== Header Part Ends ====== */
+    /* ====== Header Part Ends ====== */
+
+    /* -------Main Body Starts-------- */
+    .quick-tools {
+        padding: 0;
+    }
+
+    .quick-tools span {
+        margin-left: 1rem;
+    }
+
+    .tools {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 45% 45%;
+        row-gap: 1.3rem;
+    }
+
+    .tool span {
+        margin-left: 0;
+    }
+
+    .tool {
+        width: auto;
+    }
+
+    /* ----- Support Menu Starts ----- */
+    .support {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support img {
+        margin-top: 1.5rem;
+        width: 90%
+    }
+
+    .features {
+        width: 80%;
+    }
+
+    /* ----- Support Menu Ends ----- */
+
+}

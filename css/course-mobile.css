@@ -1,0 +1,43 @@
+@media (max-width: 500px) {
+html {
+    font-size: calc(100vw / 28);
+}
+
+.hide-nav {
+    transform: translateX(-110%);
+}
+
+.lists {
+    width: 45vw;
+    font: 1.3rem;
+    border-right: 0.05rem solid #767676;
+}
+.topics{
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+}
+.hide-page{
+    padding-left: 0;
+}
+
+.subject{
+    width: 100vw;
+    height: 2.3rem;
+}
+.subject span{
+    margin-left: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.subject > i{
+    right: 4rem;
+    font-size: 1.2rem;
+}
+.subject div{
+    width: 2.8rem;
+    font-size: 1.3rem;
+}
+.note-view{
+    height: calc(100vh - 2.3rem);
+}
+}
