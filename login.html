@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="description"
+        content="Login With your Existing Account. #1 Best Quality Online Courses in India Available Here. Now start your Learning and Earning Journey together with Us. Earn smartly with Our Skill based Courses.">
+    <meta name="keywords"
+        content="Best Online Courses, Online Notes in India, Start your Earning today through Refer and Earn Program">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="/images/favicon.png">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home-mobile.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Home",
+    "item": "https://NotesPdf.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Login",
+    "item": "https://NotesPdf.com/login.html"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "Create Account",
+    "item": "https://NotesPdf.com/signup.html"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "Business Model",
+    "item": "https://NotesPdf.com/business-model.html"  
+  }]
+}
+</script>
+
+<style>
+    .wallpaper {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center
+    }
+
+    .pop-login {
+        left: 0;
+    }
+
+    .form {
+        width: 40vw;
+    }
+
+    @media (orientation: landscape) {
+        .wallpaper img {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+
+    @media (orientation: portrait) {
+        .wallpaper img {
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        html {
+            font-size: calc(100vw / 28);
+        }
+
+        .form {
+            width: 80vw;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="wallpaper">
+        <img src="images/desk.jpg">
+    </div>
+    <div class="pop-login">
+        <div class="hidden-login" onclick="popuphide()"></div>
+        <form action="login.php" method="POST">
+            <div class="form">
+                <h3>Login Form</h3>
+                <label for="email">Email or Mobile</label>
+                <input type="text" name="email_mobile" id="email" placeholder="Enter Email / Mobile" required>
+                <label for="password">Login Password</label>
+                <div class="eye">
+                    <input type="Password" name="login_pass" id="password" placeholder="Enter Login Password"
+                        class="log-pass" required>
+                    <i class="fa-solid fa-eye-slash" onclick="showpass()"></i>
+                    <i class="fa-solid fa-eye" onclick="hidepass()"></i>
+                </div>
+                <div class="condition">
+                    <input type="checkbox" id="remember" class="confirm">
+                    <span><label style="margin-left: 0;" for="remember">Remember Me</label></span>
+                </div>
+                <button>Login</button>
+                <div class="noacc">
+                    Have no account ? &nbsp;
+                    <a href="signup.html"><span>Create new Account</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <h1 style="opacity: 0;">Login with your Existing Account.</h1>
+    <script>
+
+        let openeye = document.getElementsByClassName('fa-eye');
+        let closeeye = document.getElementsByClassName('fa-eye-slash');
+        let pass = document.getElementsByClassName('log-pass');
+        function hidepass() {
+            pass[0].type = "text";
+            openeye[0].style.display = 'none';
+            closeeye[0].style.display = 'flex';
+            document.getElementById('password').focus();
+        }
+        function showpass() {
+            pass[0].type = "password";
+            openeye[0].style.display = 'flex';
+            closeeye[0].style.display = 'none';
+            document.getElementById('password').focus();
+        }
+    </script>
+</body>
+
+</html>
