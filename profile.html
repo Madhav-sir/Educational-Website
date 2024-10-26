@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="/images/favicon.png">
+    <link rel="stylesheet" href="css/Profile.css">
+    <link rel="stylesheet" href="css/profile-mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <main>
+        <div class="container" style="overflow: hidden;">
+            <div class="option">
+                <div class="dp">
+                    <div class="pic">
+                        M                    </div>
+                    <div>
+                        Hello Raghav..!!
+                    </div>
+                </div>
+                <div class="button_box">
+                    <div class="select" style="color: #006fb8;">
+                        <i class="fa-regular fa-circle-user"></i>
+                        <span>Profile</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="select">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Security</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="select">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Banking&nbsp;Info</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div class="select">
+                        <a style="text-decoration: none; color: #000;" href="logout.html">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Logout</span>
+                            <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="inside">
+                <div class="back">
+                    <i class="fa-solid fa-arrow-left-long back_btn"></i>
+                    <div></div>
+                </div>
+                <form class="section profile" action="">
+                    <label for="first">First Name</label>
+                    <Input id="first" placeholder="Enter First Name" value="Raghav"></Input>
+                    <label for="middle">Middle Name</label>
+                    <Input id="middle" placeholder="Enter Middle Name" value=""></Input>
+                    <label for="last">Last Name</label>
+                    <Input id="last" placeholder="Enter Last Name" value="Kumar"></Input>
+                    <label for="email">Email Address</label>
+                    <Input id="email" placeholder="Enter Email" value="mkgmail567@gmail.com" disabled></Input>
+                    <label for="mobile">Mobile No.</label>
+                    <Input id="mobile" placeholder="Enter Mobile No." value="7004050505" disabled></Input>
+                    <label for="age">Age (Years)</label>
+                    <Input id="last" placeholder="Enter Age in Years" value="25"></Input>
+                    <label for="gender">Gender</label>
+                    <select name="" id="gender">
+                        <option value="male" selected>Male</option>
+                        <option value="female" >Female</option>
+                        <option value="others" >Others</option>
+                    </select>
+                    <label for="profile_pass">Profile Password</label>
+                    <Input id="profile_pass" type="password" placeholder="Enter Profile Password" required></Input>
+                    <button>Update</button>
+                </form>
+                <div class="section change" style="display: none;">
+                    <div>
+                        <p>
+                            Login Password
+                        </p>
+                        <div class="click">
+                            Change
+                        </div>
+                        <div class="click">
+                            Forget
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            Profile Password
+                        </p>
+                        <div class="click">
+                            Reset
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            Security Question
+                        </p>
+                        <div class="click">
+                            Reset
+                        </div>
+                    </div>
+                    <style>
+                        .change {
+                            position: relative;
+                        }
+
+                        .change_pass {
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            padding-left: 3rem;
+                            box-sizing: border-box;
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            background-color: #fff;
+                        }
+
+                        .pass_form {
+                            position: relative;
+                            padding-top: 2rem;
+                            width: 55%;
+                            color: #05b;
+                            border: 0px solid;
+                            display: flex;
+                            flex-direction: column;
+                            background-color: #fff;
+                        }
+
+                        .pass_form span {
+                            color: #000;
+                            margin-bottom: 1.5rem;
+                            font-size: 1.6rem;
+                        }
+
+                        .pass_form label {
+                            font-size: 1.3rem;
+                            margin-top: -0.6rem;
+                            margin-bottom: 0.3rem;
+                        }
+                        .verification {
+                            position: relative;
+                            width: 100%;
+                            margin-top: 0.3rem;
+                        }
+
+                        .verification input {
+                            width: 100%;
+                            position: relative;
+                            margin: 0;
+                            padding: 0.4rem;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            box-sizing: border-box;
+                            border: 1px solid;
+                            border-radius: 0.2rem;
+                        }
+
+                        .verification .verifying {
+                            position: absolute;
+                            right: 0.5rem;
+                            top: 0.4rem;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            color: #00f;
+                        }
+
+                        .otp_send {
+                            position: relative;
+                            left: 0;
+                            top: -1.6rem;
+                            margin-top: -1rem;
+                            font-size: 0.95rem;
+                            border: 0px solid;
+                        }
+
+                        .verify {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            margin-top: -1rem;
+                            border: 0px solid;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .verify input {
+                            margin: 0;
+                            height: 2rem;
+                            width: 60%;
+                            padding: 0.4rem;
+                            box-sizing: border-box;
+                            font-size: 1.1rem;
+                        }
+
+                        .verify div {
+                            width: 40%;
+                            height: 2rem;
+                            margin: 0;
+                            margin-left: 5%;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: #fff;
+                            background-color: #0a0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid green;
+                            border-radius: 0.3rem;
+                        }
+
+                        .resend {
+                            color: blue;
+                            font-size: 0.95rem;
+                            margin-top: 0.3rem;
+                            margin-bottom: 0.8rem;
+                        }
+
+                        .pass_form .resend span {
+                            color: blue;
+                            font-size: 0.95rem;
+                        }
+
+                        .cut {
+                            top: 0rem;
+                            right: 1.5rem;
+                            position: absolute;
+                            z-index: 2;
+                            font-size: 2.5rem;
+                        }
+
+                        .eye {
+                            position: relative;
+                            width: 100%;
+                        }
+
+                        .eye input {
+                            width: 100%;
+                            padding: 0.4rem;
+                            box-sizing: border-box;
+                            height: 2.4rem;
+                            font-size: 1.15rem;
+                        }
+
+                        .eye i {
+                            position: absolute;
+                            right: 0.5rem;
+                            top: 0.8rem;
+                            font-size: 1rem;
+                        }
+
+                        .eye :nth-child(2) {
+                            display: none;
+                        }
+
+                        .error_pass {
+                            color: #d00;
+                            margin-top: -1.3rem;
+                            font-size: 0.95rem;
+                            font-weight: 400;
+                            display: none;
+                        }
+
+                        .set_pass {
+                            margin-top: -0.3rem;
+                            margin-bottom: 0.5rem;
+                            padding: 0.4rem 1rem;
+                            display: inline-block;
+                            border: 1px solid #06f;
+                            border-radius: 0.3rem;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            color: #fff;
+                            background-color: #0af;
+                        }
+
+@media (max-width: 500px) {
+                            html {
+                                font-size: calc(100vw / 28);
+                            }
+
+                            .change_pass {
+                                padding: 0;
+                                align-items: center;
+                            }
+
+                            .pass_form {
+                                width: 80%;
+                            }
+
+                            .cut {
+                                top: -1rem;
+                                right: 1.5rem;
+                            }
+                        }
+                    </style>
+                    <!-- ----------Login Password Chaging Form Starts--------- -->
+                    <!-- ----------Login Password Chaging Form Starts--------- -->
+                    <ul class="change_pass" style="display: none;">
+                        <div class="cut">
+                            ×
+                        </div>
+                        <form class="pass_form" action="form/login_password.php" method="POST">
+                            <span>Change Login Password :</span>
+
+                            <label for="pass1">Old Login Password</label>
+                            <div class="eye">
+                                <input id="pass1" name="old_password" type="Password" placeholder="Old Login Password" class="log-pass"
+                                required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass1()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass1()"></i>
+                            </div>
+
+                            <label for="pass2">New Login Password</label>
+                            <div class="eye">
+                                <input id="pass2" name="new_password" type="Password" placeholder="New Login Password" class="log-pass"
+                                required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass2()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass2()"></i>
+                            </div>
+                            <div class="error_pass">
+                                Password must include
+                                Lowercase, Uppercase, Number & Special Character.
+                            </div>
+                            <label for="pass3">Confirm Login Password</label>
+                            <div class="eye">
+                                <input id="pass3" name="confirm_pass" type="Password" placeholder="Enter Login Password Again"
+                                class="log-pass" required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass3()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass3()"></i>
+                            </div>
+                            <div class="error_pass">
+                                New password & Confirm
+                                Password Must be same.
+                            </div>
+                            <button class="set_pass">Submit</button>
+                        </form>
+                    </ul>
+                    <!-- ----------Login Password Chaging Reset Starts--------- -->
+                    <!-- ----------Login Password Chaging Reset Starts--------- -->
+                    <ul class="change_pass" style="display: none;">
+                        <div class="cut">
+                            ×
+                        </div>
+                        <form class="pass_form" action="form/login_password.php" method="POST">
+                            <span>Change Login Password :</span>
+
+                            <label for="pass4">Profile Password</label>
+                            <div class="eye">
+                                <input id="pass4" name="profile_pass" type="Password" placeholder="Enter Your Profile Password"
+                                class="log-pass" required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass4()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass4()"></i>
+                            </div>
+
+                            <label for="pass5">New Login Password</label>
+                            <div class="eye">
+                                <input id="pass5" name="new_password" type="Password" placeholder="New Login Password" class="log-pass"
+                                required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass5()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass5()"></i>
+                            </div>
+                            <div class="error_pass">
+                                Password must include
+                                Lowercase, Uppercase, Number & Special Character.
+                            </div>
+                            <label for="pass6">Confirm Login Password</label>
+                            <div class="eye">
+                                <input id="pass6" name="confirm_pass" type="Password" placeholder="Enter Login Password Again"
+                                class="log-pass" required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass6()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass6()"></i>
+                            </div>
+                            <div class="error_pass">
+                                New password & Confirm
+                                Password Must be same.
+                            </div>
+                            <button class="set_pass">Submit</button>
+                        </form>
+                    </ul>
+                    <!-- ----------Profile Password Chaging Form Starts--------- -->
+                    <!-- ----------Profile Password Chaging Form Starts--------- -->
+                    <ul class="change_pass" style="display: none;">
+                        <div class="cut">
+                            ×
+                        </div>
+                        <form class="pass_form" action="form/profile_password.php" method="POST">
+                            <span>Change Profile Password :</span>
+
+                            <label for="">Mobile Number</label>
+                            <div class="verification">
+                                <input type="text" class="my_mobile" name="my_mobile" placeholder="Mobile Number" value="7004050505" disabled>
+                                <span class="verifying">verify</span>
+                                <span class="verifying" style="color: #070; display: none;">
+                                    verified ✓
+                                </span>
+                            </div>
+                            <ul class="otp_send" style="color: #070; margin-top: 0.3rem;">
+                                An OTP Send to this Mobile No.
+                            </ul>
+                            <ul class="verify">
+                                <input type="number" class="enter_otp" name="reset_otp" placeholder="Enter OTP">
+                                <div class="submit_otp">
+                                    Submit OTP
+                                </div>
+                            </ul>
+                            <ul class="resend">
+                                <i class="fa-solid fa-rotate-right"></i>&nbsp; Resend OTP&nbsp;
+                                <span id="timer">after 60 Sec</span>
+                            </ul>
+
+                            <label class="after_verify" for="pass7">New Profile Password</label>
+                            <div class="eye">
+                                <input id="pass7" name="new_password" type="Password" placeholder="Enter New Password" class="log-pass"
+                                required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass7()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass7()"></i>
+                            </div>
+                            <div class="error_pass">
+                                Password must include
+                                Lowercase, Uppercase, Number & Special Character.
+                            </div>
+                            <label class="after_verify" for="pass8">Confirm Profile Password</label>
+                            <div class="eye">
+                                <input id="pass8" name="confirm_pass" type="Password" placeholder="Enter Password Again" class="log-pass"
+                                required>
+                                <i class="fa-solid fa-eye-slash" onclick="showpass8()"></i>
+                                <i class="fa-solid fa-eye" onclick="hidepass8()"></i>
+                            </div>
+                            <div class="error_pass">
+                                New password & Confirm
+                                Password Must be same.
+                            </div>
+                            <button class="set_pass">Submit</button>
+                        </form>
+                    </ul>
+                </div>
+                <script>
+                                        let click_open = document.getElementsByClassName('click');
+                    let change_pass = document.getElementsByClassName('change_pass');
+                    let cross_pass = document.getElementsByClassName('cut');
+                    click_open[0].addEventListener('click', function () {
+                        change_pass[0].style.display = "flex";
+                    });
+                    click_open[1].addEventListener('click', function () {
+                        change_pass[1].style.display = "flex";
+                    });
+                    click_open[2].addEventListener('click', function () {
+                        change_pass[2].style.display = "flex";
+                    });
+                    cross_pass[0].addEventListener('click', function () {
+                        change_pass[0].style.display = "none";
+                    });
+                    cross_pass[1].addEventListener('click', function () {
+                        change_pass[1].style.display = "none";
+                    });
+                    cross_pass[2].addEventListener('click', function () {
+                        change_pass[2].style.display = "none";
+                    });
+                    // --------------OTP Verification Section Starts---------------
+                    // --------------OTP Verification Section Starts---------------
+                    let verifying = document.getElementsByClassName('verifying');
+                    let verify = document.getElementsByClassName('verify')[0];
+                    let otp_send = document.getElementsByClassName('otp_send')[0];
+                    let resend = document.getElementsByClassName('resend')[0];
+                    let already = document.getElementsByClassName('eye');
+                    let alrdy = document.getElementsByClassName('after_verify');
+                    let timeLeft = 59;
+                    document.getElementsByClassName('submit_otp')[0].addEventListener('click', function () {});
+
+                    verify.style.display = 'none';
+                    otp_send.style.display = 'none';
+                    resend.style.display = 'none';
+
+                    already[6].style.display = 'none';
+                    already[7].style.display = 'none';
+                    alrdy[0].style.display = 'none';
+                    alrdy[1].style.display = 'none';
+                    function not_verified() {
+                        verifying[0].style.display = 'none';
+                        verifying[1].style.display = 'none';
+
+                        verify.style.display = 'flex';
+                        otp_send.style.display = 'flex';
+                        resend.style.display = 'flex';
+
+                        const countdown = setInterval(() => {
+                            if (timeLeft <= 0) {
+                                clearInterval(countdown);
+                                document.getElementById("timer").innerHTML = "";
+
+                            } else {
+                                document.getElementById("timer").innerHTML = 'after ' + timeLeft + ' Sec';
+                            }
+                            timeLeft -= 1;
+                        },
+                            1000);
+
+                    }
+
+                    function verified() {
+                        verifying[0].style.display = 'none';
+                        verifying[1].style.display = 'flex';
+
+                        verify.style.display = 'none';
+                        otp_send.style.display = 'none';
+                        resend.style.display = 'none';
+
+                        already[6].style.display = 'flex';
+                        already[7].style.display = 'flex';
+                        alrdy[0].style.display = 'flex';
+                        alrdy[1].style.display = 'flex';
+                    }
+
+                    // ----------------OTP Verification End-----------------
+                    // ----------------Password hide & chow-----------------
+                    let openeye = document.getElementsByClassName('fa-eye');
+                    let closeeye = document.getElementsByClassName('fa-eye-slash');
+                    let pass = document.getElementsByClassName('log-pass');
+                    function hidepass1() {
+                        pass[0].type = "text";
+                        openeye[0].style.display = 'none';
+                        closeeye[0].style.display = 'flex';
+                        document.getElementById('pass1').focus();
+                    }
+                    function showpass1() {
+                        pass[0].type = "password";
+                        openeye[0].style.display = 'flex';
+                        closeeye[0].style.display = 'none';
+                        document.getElementById('pass1').focus();
+                    }
+                    function hidepass2() {
+                        pass[1].type = "text";
+                        openeye[1].style.display = 'none';
+                        closeeye[1].style.display = 'flex';
+                        document.getElementById('pass2').focus();
+                    }
+                    function showpass2() {
+                        pass[1].type = "password";
+                        openeye[1].style.display = 'flex';
+                        closeeye[1].style.display = 'none';
+                        document.getElementById('pass2').focus();
+                    }
+                    function hidepass3() {
+                        pass[2].type = "text";
+                        openeye[2].style.display = 'none';
+                        closeeye[2].style.display = 'flex';
+                        document.getElementById('pass3').focus();
+                    }
+                    function showpass3() {
+                        pass[2].type = "password";
+                        openeye[2].style.display = 'flex';
+                        closeeye[2].style.display = 'none';
+                        document.getElementById('pass3').focus();
+                    }
+                    function hidepass4() {
+                        pass[3].type = "text";
+                        openeye[3].style.display = 'none';
+                        closeeye[3].style.display = 'flex';
+                        document.getElementById('pass4').focus();
+                    }
+                    function showpass4() {
+                        pass[3].type = "password";
+                        openeye[3].style.display = 'flex';
+                        closeeye[3].style.display = 'none';
+                        document.getElementById('pass4').focus();
+                    }
+                    function hidepass5() {
+                        pass[4].type = "text";
+                        openeye[4].style.display = 'none';
+                        closeeye[4].style.display = 'flex';
+                        document.getElementById('pass5').focus();
+                    }
+                    function showpass5() {
+                        pass[4].type = "password";
+                        openeye[4].style.display = 'flex';
+                        closeeye[4].style.display = 'none';
+                        document.getElementById('pass5').focus();
+                    }
+                    function hidepass6() {
+                        pass[5].type = "text";
+                        openeye[5].style.display = 'none';
+                        closeeye[5].style.display = 'flex';
+                        document.getElementById('pass6').focus();
+                    }
+                    function showpass6() {
+                        pass[5].type = "password";
+                        openeye[5].style.display = 'flex';
+                        closeeye[5].style.display = 'none';
+                        document.getElementById('pass6').focus();
+                    }
+                    function hidepass7() {
+                        pass[6].type = "text";
+                        openeye[6].style.display = 'none';
+                        closeeye[6].style.display = 'flex';
+                        document.getElementById('pass7').focus();
+                    }
+                    function showpass7() {
+                        pass[6].type = "password";
+                        openeye[6].style.display = 'flex';
+                        closeeye[6].style.display = 'none';
+                        document.getElementById('pass7').focus();
+                    }
+                    function hidepass8() {
+                        pass[7].type = "text";
+                        openeye[7].style.display = 'none';
+                        closeeye[7].style.display = 'flex';
+                        document.getElementById('pass8').focus();
+                    }
+                    function showpass8() {
+                        pass[7].type = "password";
+                        openeye[7].style.display = 'flex';
+                        closeeye[7].style.display = 'none';
+                        document.getElementById('pass8').focus();
+                    }
+                    // ----------------Validate Password Characters-----------------
+                    let error_pass = document.getElementsByClassName('error_pass');
+                    let set_pass = document.getElementsByClassName('set_pass');
+                    const password = "";
+                    let new_pass1 = 0;
+                    let con_pass1 = 0;
+                    let new_pass2 = 0;
+                    let con_pass2 = 0;
+                    let new_pass3 = 0;
+                    let con_pass3 = 0;
+
+                    pass[1].addEventListener('input', right_pass1);
+                    pass[2].addEventListener('input', right_pass1);
+                    function right_pass1() {
+                        const password = pass[1].value;
+
+                        function isValidPassword(password) {
+                            const lowerCase = /[a-z]/;
+                            const upperCase = /[A-Z]/;
+                            const numbers = /\d/;
+                            const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
+
+                            if (lowerCase.test(password) && upperCase.test(password) && numbers.test(password) && specialChars.test(password)) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        if (isValidPassword(password)) {
+                            error_pass[0].style.display = 'none';
+                            new_pass1 = 1;
+                        } else {
+                            error_pass[0].style.display = 'flex';
+                            new_pass1 = 0;
+                        }
+                        if (pass[1].value == pass[2].value) {
+                            error_pass[1].style.display = 'none';
+                            con_pass1 = 1;
+                        } else {
+                            error_pass[1].style.display = 'flex';
+                            con_pass1 = 0;
+                        }
+                        active_btn1();
+                    }
+                    function active_btn1() {
+                        if (new_pass1 == '1' && con_pass1 == '1') {
+                            set_pass[0].type = 'submit';
+                            // set_pass[0].style.color = 'red';
+                        } else {
+                            set_pass[0].type = 'button';
+                        }
+                    }
+                    // ------------Validating Password Type-----------
+                    // ------------Validating Password Type-----------
+                    pass[4].addEventListener('input', right_pass2);
+                    pass[5].addEventListener('input', right_pass2);
+                    function right_pass2() {
+                        const password = pass[4].value;
+
+                        function isValidPassword(password) {
+                            const lowerCase = /[a-z]/;
+                            const upperCase = /[A-Z]/;
+                            const numbers = /\d/;
+                            const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
+
+                            if (lowerCase.test(password) && upperCase.test(password) && numbers.test(password) && specialChars.test(password)) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        if (isValidPassword(password)) {
+                            error_pass[2].style.display = 'none';
+                            new_pass2 = 1;
+                        } else {
+                            error_pass[2].style.display = 'flex';
+                            new_pass2 = 0;
+                        }
+                        if (pass[4].value == pass[5].value) {
+                            error_pass[3].style.display = 'none';
+                            con_pass2 = 1;
+                        } else {
+                            error_pass[3].style.display = 'flex';
+                            con_pass2 = 0;
+                        }
+                        active_btn2();
+                    }
+                    function active_btn2() {
+                        if (new_pass2 == '1' && con_pass2 == '1') {
+                            set_pass[1].type = 'submit';
+                            // set_pass[0].style.color = 'red';
+                        } else {
+                            set_pass[1].type = 'button';
+                        }
+                    }
+                    // ------------Validating Password Type-----------
+                    // ------------Validating Password Type-----------
+                    pass[6].addEventListener('input', right_pass3);
+                    pass[7].addEventListener('input', right_pass3);
+                    function right_pass3() {
+                        const password = pass[6].value;
+
+                        function isValidPassword(password) {
+                            const lowerCase = /[a-z]/;
+                            const upperCase = /[A-Z]/;
+                            const numbers = /\d/;
+                            const specialChars = /[!@#$%^&*(),.?":{}|<>]/;
+
+                            if (lowerCase.test(password) && upperCase.test(password) && numbers.test(password) && specialChars.test(password)) {
+                                return true;
+                            }
+                            return false;
+                        }
+                        if (isValidPassword(password)) {
+                            error_pass[4].style.display = 'none';
+                            new_pass2 = 1;
+                        } else {
+                            error_pass[4].style.display = 'flex';
+                            new_pass2 = 0;
+                        }
+                        if (pass[6].value == pass[7].value) {
+                            error_pass[5].style.display = 'none';
+                            con_pass2 = 1;
+                        } else {
+                            error_pass[5].style.display = 'flex';
+                            con_pass2 = 0;
+                        }
+                        active_btn3();
+                    }
+                    function active_btn3() {
+                        if (new_pass2 == '1' && con_pass2 == '1') {
+                            set_pass[2].type = 'submit';
+                            // set_pass[0].style.color = 'red';
+                        } else {
+                            set_pass[2].type = 'button';
+                        }
+                    }
+                    // --------------Ajax Request Login Password Change---------------
+                    // --------------Ajax Request Login Password Change---------------
+
+                    verifying[0].addEventListener('click', function() {
+                        not_verified();
+                        var elements = document.getElementsByClassName("my_mobile");
+                        var formData = new FormData();
+
+                        formData.append(elements[0].name, elements[0].value);
+
+                        var xmlHttp = new XMLHttpRequest();
+                        xmlHttp.onreadystatechange = function() {
+                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                                //alert(xmlHttp.responseText);
+                            }
+                        }
+                        xmlHttp.open("post", "ajax/reset_otp.php");
+                        xmlHttp.send(formData);
+                    });
+                    document.getElementsByClassName('submit_otp')[0].addEventListener('click', function () {
+
+                        var elements = document.getElementsByClassName("enter_otp");
+                        var formData = new FormData();
+
+                        formData.append(elements[0].name, elements[0].value);
+
+                        var xmlHttp = new XMLHttpRequest();
+                        xmlHttp.onreadystatechange = function() {
+                            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                                if (xmlHttp.responseText == 'ok') {
+                                    verified();
+                                } else {
+                                    otp_send.innerHTML = 'Wrong OTP, Try Again..!!';
+                                    otp_send.style.color = 'red';
+                                    //alert(xmlHttp.responseText);
+                                }
+                            }
+                        }
+                        xmlHttp.open("post", "ajax/reseting_verify.php");
+                        xmlHttp.send(formData);
+
+                    });
+                </script>
+                <div class="section bank" style="display: none;">
+                    <div class="record">
+                        <div>
+                            1. Banking Details :
+                        </div>
+                        <p>
+                            Account Holder Name :
+                        </p>
+                        <span>Raghav Kumar Rao</span>
+                        <p>
+                            Account Number :
+                        </p>
+                        <span>90457790789</span>
+                        <p>
+                            IFSC Code :
+                        </p>
+                        <span>SBIN0019023</span>
+                        <p>
+                            Mobile Number:
+                        </p>
+                        <span>7004050505</span>
+                    </div>                    <div class="record">
+                        <div>
+                            2. UPI Details :
+                        </div>
+                        <p>
+                            UPI ID :
+                        </p>
+                        <span>mkrupi@ybl</span>
+                        <p>
+                            UPI Number :
+                        </p>
+                        <span>7004050505</span>
+                    </div>                    <div class="form" style="display: none;">
+                        <div class="cancel">
+                            ×
+                        </div>
+                        <form class="bank_form" action="form/banking_details.php" method="POST">
+                            <span>Enter New Bank Details :</span>
+                            <label for="">Account Holder Name</label>
+                            <input type="text" placeholder="Enter Full Name" name="account_holder" value="Raghav Kumar Rao" required>
+                            <label for="">Account Number</label>
+                            <input type="text" placeholder="Enter Account Number" name="account_no" value="90457790789" required>
+                            <label for="">IFSC Code</label>
+                            <input type="text" placeholder="Enter IFSC Code" name="ifsc" value="SBIN0019023" required>
+                            <label for="">Mobile No.</label>
+                            <input type="number" placeholder="Enter Mobile No." name="bank_mobile" value="7004050505" required>
+                            <button class="update">Update</button>
+                        </form>
+                        <div class="or">
+                            OR,
+                        </div>
+                        <form class="bank_form" action="form/banking_details.php" method="POST">
+                            <span>Enter UPI ID :</span>
+                            <label for="">UPI ID</label>
+                            <input type="text" placeholder="Enter UPI ID" name="upi_id" value="mkrupi@ybl" required>
+                            <label for="">Mobile No.</label>
+                            <input type="number" placeholder="Enter Mobile No." name="upi_mobile" value="7004050505" required>
+                            <button class="update">Update</button>
+                        </form>
+                    </div>
+                    <div class="update" style="position: absolute; left: 150vw; opacity: 0;">
+                        Add New +
+                    </div>
+                    <div class="update" >
+                        Change
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        let button = document.getElementsByClassName('select');
+        let section = document.getElementsByClassName('section');
+        let container = document.getElementsByClassName('inside')[0];
+        let back = document.getElementsByClassName('back')[0];
+        let back_btn = document.getElementsByClassName('back_btn')[0];
+
+        function btn_one() {
+            button[0].style.color = '#006fb8';
+            button[1].style.color = '#000';
+            button[2].style.color = '#000';
+
+            back.classList.remove('hide');
+            container.classList.add('show');
+
+            section[0].style.display = 'flex';
+            section[1].style.display = 'none';
+            section[2].style.display = 'none';
+        }
+        function btn_two() {
+            button[0].style.color = '#000';
+            button[1].style.color = '#006fb8';
+            button[2].style.color = '#000';
+
+            back.classList.remove('hide');
+            container.classList.add('show');
+
+            section[0].style.display = 'none';
+            section[1].style.display = 'inherit';
+            section[2].style.display = 'none';
+        }
+        function btn_three() {
+            button[0].style.color = '#000';
+            button[1].style.color = '#000';
+            button[2].style.color = '#006fb8';
+
+            back.classList.remove('hide');
+            container.classList.add('show');
+
+            section[0].style.display = 'none';
+            section[1].style.display = 'none';
+            section[2].style.display = 'inherit';
+        }
+
+        button[0].addEventListener('click', btn_one);
+        button[1].addEventListener('click', btn_two);
+        button[2].addEventListener('click', btn_three);
+
+        back_btn.addEventListener('click', function() {
+            section[0].style.display = 'none';
+            section[1].style.display = 'none';
+            section[2].style.display = 'none';
+
+            back.classList.add('hide');
+            container.classList.remove('show');
+        });
+        // ----------------Banking Section----------------
+        let form = document.getElementsByClassName('form')[0];
+        let record = document.getElementsByClassName('record');
+        let cancel = document.getElementsByClassName('cancel')[0];
+        let update = document.getElementsByClassName('update');
+        update[2].addEventListener('click', function () {
+            record[0].style.display = 'none';
+            record[1].style.display = 'none';
+            form.style.display = 'inherit';
+
+            update[2].style.display = 'none';
+            update[3].style.display = 'none';
+        });
+        update[3].addEventListener('click', function () {
+            record[0].style.display = 'none';
+            record[1].style.display = 'none';
+            form.style.display = 'inherit';
+
+            update[2].style.display = 'none';
+            update[3].style.display = 'none';
+        });
+        cancel.addEventListener('click', function () {
+            form.style.display = 'none';
+            record[0].style.display = 'inherit';
+            record[1].style.display = 'inherit';
+
+            update[2].style.display = 'inline-block';
+            update[3].style.display = 'inline-block';
+        });
+    </script>
+</body>
+
+</html>
