@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet</title>
+    <link rel="icon" type="image" href="/images/favicon.png">
+    <link rel="stylesheet" href="css/wallet.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard-mobile.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- --------Included Header-------- -->
+    <!-- --------Included Header-------- -->
+    <!-- ======= Header Part Starts ======= -->
+    <!-- ======= Header Part Starts ======= -->
+    <!-- ======= Header Part Starts ======= -->
+    <header>
+        <nav>
+            <!-- --- Upper Nav Menu --- -->
+            <div class="upper-nav">
+                <div class="desk-logo">
+                    <img src="images/black-logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <div class="page">
+                        <a href="dashboard.html">Home</a>
+                    </div>
+                    <div class="page">
+                        <span onclick="pagebox()">
+                            Pages <i class="fa-solid fa-angle-down"></i>
+                        </span>
+                        <div class="page-box">
+                            <span><a href="privacy_policy.html">Contact Us</a></span>
+                            <span><a href="business-model.html">Business Model</a></span>
+                            <span onclick="refer_menu()">Refer & Earn</span>
+                            <span><a href="privacy_policy.html">Privacy Policy</a></span>
+                            <span><a href="terms_and_conditions.html">Terms&nbsp;&&nbsp;conditions</a></span>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <a href="wallet.html">
+                            ₹300.00<i class="fa-solid fa-wallet" style="color: #d0780d;"></i></a>
+                    </div>
+                    <div class="page">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="account">
+                        <p style="color: #42425a;">
+                            Hello Raghav..!!
+                        </p>
+                        <div>
+                            <a href="profile.html">
+                                <i class="fa-regular fa-circle-user"></i>&nbsp; Account
+                            </a>
+                        </div>
+                        <div>
+                            <a href="logout.html">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp; Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --- Blank Nav Menu --- -->
+            <div class="blank-nav" onclick="hidenav()"></div>
+            <!-- --- Upper Mobile Nav Menu --- -->
+            <div class="sec-nav">
+                <i class="fa-solid fa-bars bars" onclick="opennav()"></i>
+                <div class="sec-logo">
+                    <img src="images/black-logo.png" alt="">
+                </div>
+                <div class="sec-login">
+                    <a class="center" href="wallet.html">
+                        <span>₹300.00</span><i class="fa-solid fa-wallet" style="color: #d0780d;"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- --- Side Nav Menu --- -->
+
+            <div class="side-nav hide-nav">
+                <div class="logos">
+                    <img src="images/black-logo.png" alt="logo">
+                    <i class="fa-solid fa-xmark" onclick="hidenav()"></i>
+                </div>
+                <div class="profile">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Raghav <i class="fa-solid fa-pen-to-square"></i></span>
+                    </a>
+                </div>
+                <div class="menus">
+                    <div class="pages">
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </div>
+                    <div class="pages" onclick="hidepages()">
+                        <i class="fa-solid fa-globe"></i> Pages <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="hidden-pages">
+                        <div>
+                            <a href="privacy_policy.html">Contact Us</a>
+                        </div>
+                        <div>
+                            <a href="business-model.html">Business Model</a>
+                        </div>
+                        <div>
+                            <a href="privacy_policy.html">Privacy Policies</a>
+                        </div>
+                        <div>
+                            <a href="terms_and_conditions.html">Terms & Conditions</a>
+                        </div>
+                    </div>
+                    <div class="pages" onclick="refer_menu()">
+                        <i class="fa-solid fa-sack-dollar" style="color: #000;"></i>
+                        &nbsp;Refer & Earn
+                    </div>
+                    <div class="pages">
+                        <a href="logout.html">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp; Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <style>
+        .referral {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blur-back {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #0008;
+        }
+
+        .refer-apps {
+            position: relative;
+            width: 35vw;
+            height: 16vw;
+            overflow: hidden;
+            border-radius: 1rem;
+            background-color: #fff;
+        }
+
+        .app_cont {
+            height: 70%;
+            display: flex;
+            column-gap: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app {
+            width: 5.5rem;
+            height: 5.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #222;
+            border-radius: 50%;
+            background-color: #bbc7;
+        }
+
+        .wapp {
+            color: #fff;
+            font-size: 3.5rem;
+            background-color: #17bd5c;
+        }
+
+        .copy-code {
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            background-color: #adf9;
+        }
+
+        @media (max-width: 500px) {
+            .refer-apps {
+                width: 70vw;
+                height: 40vw;
+            }
+
+            .app {
+                font-size: 2.8rem;
+            }
+
+            .wapp {
+                font-size: 3.2rem;
+            }
+
+            .copy-code {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+    <div class="referral">
+        <div class="blur-back" onclick="refer_menu()"></div>
+        <div class="refer-apps">
+            <div class="app_cont">
+                <div class="app wapp" onclick="whatsapp()">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="app" onclick="copy_link()">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+            </div>
+            <div class="copy-code" onclick="copy_code()">
+                <div>
+                    MADH2505&nbsp;&nbsp;<i class="fa-regular fa-copy"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let referral = document.getElementsByClassName('referral')[0];
+        let ref = 0;
+        function refer_menu() {
+            if (ref == 0) {
+                referral.style.display = 'flex';
+                ref = 1;
+            } else {
+                referral.style.display = 'none';
+                ref = 0;
+            }
+        }
+        function whatsapp() {
+            window.location.href = 'whatsapp://send?text=Hey..%21%21%21%0AI+found+Some+Really+Amazing+Courses+Online+here.%0ATo+get+best+discounts+in+all+Courses+Join+using+My+Code+MADH2505%0A%0AOr%2c+Simply+Join+through+this+link-%0Ahttps%3A%2F%2FNotesPdf.com%2Finvite-code%2FMADH2505';
+        }
+        function copy_link() {
+            navigator.clipboard.writeText('https://NotesPdf.com/invite-code/MADH2505');
+        }
+        function copy_code() {
+            navigator.clipboard.writeText('MADH2505');
+        }
+    </script>
+    <!-- ======= Header Menu Ends ======== -->
+    <!-- ======= Header Menu Ends ======== -->
+    <!-- ======= Header Menu Ends ======== -->
+    <script>
+        // ----------------Account box Hide & Show-----------------
+        let profile = document.getElementsByClassName('page')[3];
+        let account = document.getElementsByClassName('account')[0];
+        let acc = 1;
+        profile.addEventListener('click', function () {
+            if (acc == 0) {
+                account.style.display = 'none';
+                acc = 1;
+            } else {
+                account.style.display = 'flex';
+                acc = 0;
+            }
+        });
+    </script>
+    <!-- ----Main Body Part Starts---- -->
+    <div class="quick-tools">
+        <span>Shortcut Menus</span>
+        <div class="tools">
+            <div class="tool clicked-tool">
+                <i class="fa-solid fa-sack-dollar" style="color: #d16601;"></i>
+                <span>Dashboard</span>
+                <p>
+                    Dashboard to Analyse Your Profits
+                </p>
+            </div>
+            <div class="tool">
+                <i class="fa-solid fa-clock-rotate-left" style="color: #002bab;"></i>
+                <span>Transactions</span>
+                <p>
+                    All Your Transaction History is Here
+                </p>
+            </div>
+            <div class="tool">
+                <i class="fa-solid fa-building-columns" style="color: #0550ac;"></i>
+                <span>Withdraw</span>
+                <p>
+                    Transfer Wallet Balance to Bank
+                </p>
+            </div>
+            <div class="tool">
+                <i class="fa-solid fa-wallet" style="color: #d0780d;"></i>
+                <span>Add Balance </span>
+                <p>
+                    Add Money to NotesPdf Wallet
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- ----- Changings after Click on tools ------ -->
+    <!-- ----- Income Dashboard Section ------ -->
+    <div class="dashboard" style="display: ;">
+        <div class="chart">
+            <div class="chart-title">
+                Raghav Kumar -
+                <i class="fa-solid fa-crown" style="color: rgb(255, 211, 79);"></i>
+            </div>
+            <div class="chart-part chart-mobile">
+                <div>
+                    <span>₹300</span>
+                    <p>
+                        Wallet Balance
+                    </p>
+                </div>
+                <div>
+                    <span>₹800</span>
+                    <p>
+                        Total Income
+                    </p>
+                </div>
+                <div>
+                    <span>₹500</span>
+                    <p>
+                        Total Withdraw
+                    </p>
+                </div>
+                <div>
+                    <span>₹0</span>
+                    <p>
+                        Withdraw&nbsp;Pending
+                    </p>
+                </div>
+                <div>
+                    <span>₹499</span>
+                    <p>
+                        Total Investment
+                    </p>
+                </div>
+                <div>
+                    <span>₹0</span>
+                    <p>
+                        Income Pending
+                    </p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .chart-part .fa-user {
+                position: relative;
+                top: -0.1rem;
+                font-size: 0.85rem;
+            }
+        </style>
+        <div class="chart">
+            <div class="chart-title">
+                Income - Basic Plan
+            </div>
+            <div class="chart-part">
+                <div>
+                    <span>₹800</span>
+                    <p>
+                        Total Income
+                    </p>
+                </div>
+                <div>
+                    <span>₹499</span>
+                    <p>
+                        Total Invesment
+                    </p>
+                </div>
+                <div>
+                    <span>₹800</span>
+                    <p>
+                        Referral Income
+                    </p>
+                </div>
+            </div>
+            <div class="chart-part">
+                <div>
+                    <span><i class="fa-solid fa-user"></i>
+                        1</span>
+                    <p>
+                        Primary Partners
+                    </p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-user"></i>
+                        3</span>
+                    <p>
+                        Sec..&nbsp;Partners
+                    </p>
+                </div>
+                <div>
+                    <span><i class="fa-solid fa-user"></i>
+                        4</span>
+                    <p>
+                        Total Partners
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----- Transaction History Section ------ -->
+    <div class="transaction" style="display: none;">
+        <div class="history">
+            <div class="sections arranged">
+                <div>
+                    S.No.
+                </div>
+                <div>
+                    Amount
+                </div>
+                <div>
+                    Date
+                </div>
+                <div>
+                    Time
+                </div>
+                <div>
+                    From / To
+                </div>
+                <div>
+                    Transaction ID
+                </div>
+                <div>
+                    Type
+                </div>
+            </div>
+            <div class="data arranged">
+                <div>
+                    1.
+                </div>
+                <div class="green">
+                    ₹499
+                </div>
+                <div>
+                    2024-09-17
+                </div>
+                <div>
+                    03:45:38
+                </div>
+                <div>
+                    Subscription
+                </div>
+                <div>
+                    OID72513505
+                </div>
+                <div class="green">
+                    Credited
+                </div>
+            </div>
+            <div class="data arranged">
+                <div>
+                    2.
+                </div>
+                <div class="red">
+                    ₹500
+                </div>
+                <div>
+                    2024-09-19
+                </div>
+                <div>
+                    04:27:47
+                </div>
+                <div>
+                    Wallet to Bank
+                </div>
+                <div>
+                    OID55783802
+                </div>
+                <div class="red">
+                    Debited
+                </div>
+            </div>
+            <div class="more center" style="display: none;">
+                View More&nbsp;<i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+    </div>
+    <!-- ----- Transaction History Section Ends ------ -->
+    <!-- ----- withdraw Menu Starts ------ -->
+    <div class="withdraw-sec" style="display: none;">
+        <form action="form/withdraw.php" method="POST">
+            <div class="withdraw">
+                <span class="heading">Withdraw Balance</span>
+                <p>
+                    Total Withdrawable Balance = <span style="color: #0088ae;">₹200</span>
+                </p>
+                <label for="amount">Amount</label>
+                <input class="input" name="amount" id="amount" type="number" placeholder="Enter Amount" maxlength="5"
+                    required>
+                <div class="warning" style="color: red; display: none;">
+                    Please select value between 0 to 200 </div>
+                <label for="bank">Select Bank</label>
+                <select name="bank" id="bank">
+                    <option value="upi" selected>UPI ID ××××i@ybl</option>
+                    <option value="bank" selected>Bank Account ××××3284</option>
+                </select>
+                <label for="pass">Profile Password</label>
+                <input id="pass" name="profile_pass" type="password" placeholder="Enter Profile Password" required>
+                <div>
+                    Note: 2% transaction charge included (Final Amount transferable = ₹<span id="final">0</span>)
+                </div>
+                <button type="submit">Withdraw</button>
+            </div>
+        </form>
+    </div>
+    <!-- ----- withdraw Part Ends ------ -->
+    <!-- ----- Add Balance Part Starts  ------ -->
+    <div class="withdraw-sec" style="display: none;">
+        <form action="">
+            <div class="withdraw">
+                <span class="heading">Add Money To Wallet</span>
+                <label for="balance">Value in Rupees</label>
+                <input class="money" id="balance" type="number" placeholder="Enter Amount" maxlength="5" required>
+                <label for="">Payment Method</label>
+                <div class="method">
+                    <input class="checkbox" type="checkbox" checked required>
+                    <span>&nbsp;Razorpay</span>
+                    <p>
+                        UPI, Credit Card, Debit Card, Net Banking etc.
+                    </p>
+                </div>
+                <div class="agree">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">
+                        &nbsp;I agree with NotesPdf <a href="">Terms & Conditions.</a>
+                    </label>
+                </div>
+                <button type="submit">Proceed to Pay</button>
+            </div>
+        </form>
+    </div>
+    <!-- ------Included Footer--------- -->
+    <!-- ------Included Footer--------- -->
+    <!-- ----- Support Menu Starts ------ -->
+    <div class="support">
+        <div class="features">
+            <span>Our Team is Here to Help You 24/7</span>
+            <div class="points">
+                <i class="fa-solid fa-check"></i>
+                Get Perfect soloution of your Queries instantly, thanks to our 24/7 support Team.
+            </div>
+            <div class="points">
+                <i class="fa-solid fa-check"></i>
+                Get Best Email support Anytime Anyday Anywhere, Just mail Us on <a href="/cdn-cgi/l/email-protection"
+                    class="__cf_email__"
+                    data-cfemail="384b4d4848574a4c785559414d4a485941165b5755">[email&#160;protected]</a>
+            </div>
+            <div class="points">
+                <i class="fa-solid fa-check"></i>
+                Also You can connect with our WhatsApp Chat support Executive 24/7
+            </div>
+        </div>
+        <img src="images/customer-support.png" alt="">
+    </div>
+    <!-- ----- Support Menu Ends ------ -->
+
+    <!-- ======= Footer Part ======= -->
+    <!-- ======= Footer Part ======= -->
+    <!-- ======= Footer Part ======= -->
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="images/white-logo.png" alt="logo">
+                <span><i class="fa-solid fa-location-dot"></i> Delhi NCR, India</span>
+                <span><i class="fa-brands fa-whatsapp"></i> +91 954 7280 000</span>
+                <span><i class="fa-regular fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="1f6c6a6f6f706d6b5f727e666a6d6f7e66317c7072">[email&#160;protected]</a></span>
+            </div>
+            <div class="footer-box">
+                <p>
+                    Pages
+                </p>
+                <span>About</span>
+                <span>Contact Us</span>
+                <span>Privacy Policy</span>
+                <span>Terms & Conditions</span>
+            </div>
+            <div class="footer-box">
+                <p>
+                    Services
+                </p>
+                <span>PDF Format</span>
+                <span>Best Price</span>
+                <span>Online tools</span>
+                <span>Quality Notes</span>
+            </div>
+            <div class="footer-box">
+                <p>
+                    Support
+                </p>
+                <span>24x7</span>
+                <span>WhatsApp</span>
+                <span>Email Service</span>
+                <span>Ticket Service</span>
+            </div>
+            <div class="footer-last">
+                <div>
+                    Best online Courses in India Available here
+                </div>
+                <div>
+                    &copy;&nbsp;NotesPdf.com
+                </div>
+                <div>
+                    Privacy
+                </div>
+                <div>
+                    Terms
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ======== Footer Tag Ends ======== -->
+    <!-- ======== Footer Tag Ends ======== -->
+    <!-- ======== Footer Tag Ends ======== -->
+    <!-- ---Script Tag For Wallet Page Only--- -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        let tool = document.getElementsByClassName('tool');
+        let dashboard = document.getElementsByClassName('dashboard')[0];
+        let transaction = document.getElementsByClassName('transaction')[0];
+        let wsec = document.getElementsByClassName('withdraw-sec')[0];
+        let addbal = document.getElementsByClassName('withdraw-sec')[1];
+        tool[0].addEventListener('click', function () {
+            tool[0].classList.add("clicked-tool");
+            tool[1].classList.remove("clicked-tool");
+            tool[2].classList.remove("clicked-tool");
+            tool[3].classList.remove("clicked-tool");
+
+            dashboard.style.display = 'block';
+            transaction.style.display = 'none';
+            wsec.style.display = 'none';
+            addbal.style.display = 'none';
+        });
+        tool[1].addEventListener('click', function () {
+            tool[0].classList.remove("clicked-tool");
+            tool[1].classList.add("clicked-tool");
+            tool[2].classList.remove("clicked-tool");
+            tool[3].classList.remove("clicked-tool");
+
+            dashboard.style.display = 'none';
+            transaction.style.display = 'block';
+            wsec.style.display = 'none';
+            addbal.style.display = 'none';
+        });
+        tool[2].addEventListener('click', function () {
+            tool[0].classList.remove("clicked-tool");
+            tool[1].classList.remove("clicked-tool");
+            tool[2].classList.add("clicked-tool");
+            tool[3].classList.remove("clicked-tool");
+
+            dashboard.style.display = 'none';
+            transaction.style.display = 'none';
+            wsec.style.display = 'block';
+            addbal.style.display = 'none';
+        });
+        tool[3].addEventListener('click', function () {
+            tool[0].classList.remove("clicked-tool");
+            tool[1].classList.remove("clicked-tool");
+            tool[2].classList.remove("clicked-tool");
+            tool[3].classList.add("clicked-tool");
+
+            dashboard.style.display = 'none';
+            transaction.style.display = 'none';
+            wsec.style.display = 'none';
+            addbal.style.display = 'block';
+        });
+
+        let amount = document.getElementsByClassName('input')[0];
+        let warning = document.getElementsByClassName('warning')[0];
+        let wpass = document.getElementsByTagName('input')[1];
+        let fianl = document.getElementById('final');
+        let button = document.getElementsByTagName('button')[0];
+        let aftertax = 0;
+        amount.addEventListener('input', function () {
+            if (amount.value > 200) {
+                warning.style.display = 'flex';
+            } else {
+                warning.style.display = 'none';
+            }
+            button.type = "submit";
+            aftertax = amount.value * 0.98;
+            final.innerHTML = aftertax.toFixed(2);
+        });
+        button.addEventListener('click', function () {
+            if (amount.value > 200 && wpass.value != '') {
+                alert('Please Change the Withdraw Amount First..!!');
+                button.type = "button";
+            }
+        });
+
+        let method = document.getElementsByClassName('method')[0];
+        let checkbox = document.getElementsByClassName('checkbox')[0];
+        let cbox = 0;
+        method.addEventListener('click', function () {
+            if (cbox == 0) {
+                checkbox.checked = false;
+                cbox = 1;
+            } else {
+                checkbox.checked = true;
+                cbox = 0;
+            }
+        });
+    </script>
+    <!-- ---Script Tag--- -->
+    <script>
+        let nav = document.getElementsByClassName('side-nav')[0];
+        let bars = document.getElementsByClassName('bars')[0];
+        let blank = document.getElementsByClassName('blank-nav')[0];
+        function opennav() {
+            nav.classList.remove("hide-nav");
+            bars.style.opacity = '0';
+            blank.style.display = 'flex';
+        }
+        function hidenav() {
+            nav.classList.add("hide-nav");
+            bars.style.opacity = '1';
+            blank.style.display = 'none';
+        }
+
+        // ---------------- In Mobile Page lists-----------------
+        let hiddenpg = document.getElementsByClassName('hidden-pages')[0];
+        let hpg = 0;
+        function hidepages() {
+            if (hpg == 0) {
+                hpg = 1;
+                hiddenpg.style.display = 'flex';
+            } else {
+                hpg = 0;
+                hiddenpg.style.display = 'none';
+            }
+        }
+        // ----------------Desktop Page box-----------------
+        let pgbox = document.getElementsByClassName('page-box')[0];
+        let pg = 0;
+        function pagebox() {
+            if (pg == 0) {
+                pg = 1;
+                pgbox.style.margin = '1.05rem 0';
+                pgbox.classList.remove("hide-login");
+            } else {
+                pgbox.classList.add("hide-login");
+                setTimeout(function () {
+                    pgbox.style.margin = '-100vw 0';
+                }, 200);
+            }
+
+        }
+    </script>
+</body>
+
+</html>
