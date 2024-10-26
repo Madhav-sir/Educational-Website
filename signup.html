@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <meta name="description"
+        content="Create an Account using Your Mobile or Email Id in NotesPdf.com - #1 Best Quality Online Courses in India Available Here. Now start your Learning and Earning Journey together with Us. Earn smartly with Our Skill based Courses.">
+    <meta name="keywords"
+        content="Best Online Courses, Online Notes in India, Start your Earning today through Refer and Earn Program">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="/images/favicon.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/home-mobile.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://NotesPdf.com/"
+        },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Login",
+                "item": "https://NotesPdf.com/login.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Create Account",
+                "item": "https://NotesPdf.com/signup.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Business Model",
+                "item": "https://NotesPdf.com/business-model.html"
+            }]
+    }
+</script>
+
+<style>
+    .wallpaper {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center
+    }
+
+    .pop-login {
+        left: 0;
+    }
+
+    .form {
+        width: 40vw;
+    }
+
+    .progress {
+        margin-top: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .progress div {
+        width: calc(50% - 2.1rem);
+        height: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: #0d0;
+    }
+
+    .progress .center {
+        width: 1.4rem;
+        height: 1.4rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .progress .empty {
+        color: #000;
+        background-color: #bccc;
+    }
+
+    select {
+        height: 2rem;
+        width: 85%;
+        margin-top: 1.5rem;
+    }
+
+    .form button {
+        margin-top: 1rem;
+    }
+
+    @media (orientation: landscape) {
+        .wallpaper img {
+            width: 100%;
+            height: fit-content;
+        }
+    }
+
+    @media (orientation: portrait) {
+        .wallpaper img {
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        html {
+            font-size: calc(100vw / 28);
+        }
+
+        .form {
+            width: 80vw;
+        }
+
+    }
+</style>
+
+<body style="">
+    <div class="wallpaper">
+        <img src="images/desk.jpg">
+    </div>
+    <div class="pop-login">
+        <div class="hidden-login" onclick="popuphide()"></div>
+        <!-- ----------------Step 1 SignUp Form-------------- -->
+        <!-- ----------------Step 1 SignUp Form-------------- -->
+        <style>
+            .verification {
+                position: relative;
+            }
+
+            .verification input {
+                width: 100%;
+            }
+
+            .verifying {
+                position: absolute;
+                right: 0.5rem;
+                top: 1.8rem;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #00f;
+            }
+
+            .verify {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            .verify input {
+                margin: 0;
+                width: 60%;
+            }
+
+            .verify div {
+                width: 40%;
+                height: 2rem;
+                margin-left: 5%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #fff;
+                background-color: #0a0;
+                display: flex;
+                justify-content: center;
+                border: 1px solid green;
+                border-radius: 0.3rem;
+            }
+
+            .resend {
+                color: blue;
+                margin-top: 0.3rem;
+            }
+        </style>
+
+        <form class="form" action="signup.php" method="POST" style="display: ;">
+            <h3>SignUp Form</h3>
+            <div class="progress">
+                <div class="center empty">
+                    1
+                </div>
+                <div class="empty"></div>
+                <div class="center empty">
+                    2
+                </div>
+                <div class="empty"></div>
+                <div class="center empty">
+                    3
+                </div>
+            </div>
+            <label for="mobile">Mobile No.</label>
+            <div class="verification">
+                <input type="number" name="mobile" id="mobile" class="mobile" maxlength="2"
+                    placeholder="Enter Mobile No" required>
+                <span class="verifying">verify</span>
+                <span class="verifying" style="color: #070; display: none;">
+                    verified ✓
+                </span>
+            </div>
+            <div class="otp_send" style="color: #070; margin-top: 0.3rem;">
+                OTP Send to this Mobile No.
+            </div>
+            <div class="verify">
+                <input type="number" name="new_otp" class="enter_otp" maxlength="2" placeholder="Enter OTP">
+                <div class="submit_otp">
+                    Submit OTP
+                </div>
+            </div>
+            <div class="resend">
+                <i class="fa-solid fa-rotate-right"></i>&nbsp; Resend OTP&nbsp;
+                <span id="timer">after 60 Sec</span>
+            </div>
+            <label for="nemail">Email Address</label>
+            <input type="email" name="email" id="nemail" maxlength="50" placeholder="Enter Email" required>
+            <label for="name">Referral Code</label>
+            <input type="text" class="referral" name="referral" id="name" maxlength="50"
+                placeholder="Enter Referral Code" value="" required>
+            <label class="after_verify" for="pass">New Password</label>
+
+            <!-- --------------Help in JavaScript Dont Delete------------ -->
+            <div class="eye" style="display: none;">
+                <input class="log-pass">
+                <i class="fa-solid fa-eye-slash" onclick="showpass()"></i>
+                <i class="fa-solid fa-eye" onclick="hidepass()"></i>
+            </div>
+            <!-- --------------Help in JavaScript Dont Delete------------ -->
+
+            <div class="eye">
+                <input type="Password" name="password" id="pass" placeholder="New Password" class="log-pass" required>
+                <i class="fa-solid fa-eye-slash" onclick="showpass2()"></i>
+                <i class="fa-solid fa-eye" onclick="hidepass2()"></i>
+            </div>
+            <div class="error_pass" style="color: #d00; margin-top: 0.3rem; display: none;">
+                Password must include
+                Lowercase, Uppercase, Number & Special Character.
+            </div>
+            <label for="cpass" class="after_verify">Confirm Password</label>
+            <div class="eye">
+                <input id="cpass" name="cpassword" type="Password" placeholder="Confirm Password" class="log-pass"
+                    required>
+                <i class="fa-solid fa-eye-slash" onclick="showpass3()"></i>
+                <i class="fa-solid fa-eye" onclick="hidepass3()"></i>
+            </div>
+            <div class="error_pass" style="color: #d00; margin-top: 0.3rem; display: none;">
+                New password & Confirm
+                Password Must be same.
+            </div>
+            <div class="condition">
+                <input id="agree" type="checkbox" class="confirm" required>
+                <Span><label style="margin-left: 0; font-size: 1rem;" for="agree">I agree with NotesPdf <a href=""
+                            style="color: blue;">Term & Conditions</a></label></Span>
+            </div>
+            <button class="signup_btn">Submit</button>
+            <div class="noacc">
+                Already have an account ? &nbsp;
+                <a href="login.html"><span>Login Here</span></a>
+            </div>
+        </form> <!-- ----------------Step 2 SignUp Form-------------- -->
+        <!-- ----------------Step 2 SignUp Form-------------- -->
+        <!-- ----------------Step 3 SignUp Form-------------- -->
+        <!-- ----------------Step 3 SignUp Form-------------- -->
+    </div>
+    <h1 style="opacity: 0;">Create an Account using Your Mobile or Email Id in NotesPdf.com</h1>
+
+    <script src="js/signup_form4.js"></script>
+    <script>
+        // --------------OTP Verification Section Starts---------------
+        // --------------OTP Verification Section Starts---------------
+        document.getElementsByClassName('referral')[0].addEventListener('input', function () {
+            var elements = document.getElementsByClassName("referral");
+            var formData = new FormData();
+
+            formData.append(elements[0].name, elements[0].value);
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.responseText == 'valid') {
+                        //alert(xmlHttp.responseText);
+                    }
+                    else {
+                        //alert(xmlHttp.responseText);
+                    }
+                }
+            }
+            xmlHttp.open("post", "ajax/verify_referral.php");
+            xmlHttp.send(formData);
+        });
+        // --------------Referral code Verification Starts---------------
+        // --------------Referral code Verification Starts---------------
+        let verifying = document.getElementsByClassName('verifying');
+        let verify = document.getElementsByClassName('verify')[0];
+        let otp_send = document.getElementsByClassName('otp_send')[0];
+        let resend = document.getElementsByClassName('resend')[0];
+        let already = document.getElementsByClassName('eye');
+        let alrdy = document.getElementsByClassName('after_verify');
+        let timeLeft = 59;
+
+        // ------------Verifying OTP AJAX---------------
+        // ------------Verifying OTP AJAX---------------
+
+        document.getElementsByClassName('submit_otp')[0].addEventListener('click', function () {
+
+            var elements = document.getElementsByClassName("enter_otp");
+            var formData = new FormData();
+
+            formData.append(elements[0].name, elements[0].value);
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.responseText == 'ok') {
+                        verified();
+                        document.getElementsByClassName("mobile")[0].disabled = true;
+                    }
+                    else {
+                        otp_send.innerHTML = 'Wrong OTP, Try Again..!!';
+                        otp_send.style.color = 'red';
+                        //alert(xmlHttp.responseText);
+                    }
+                }
+            }
+            xmlHttp.open("post", "ajax/verify_mobile.php");
+            xmlHttp.send(formData);
+
+        });
+
+        verifying[0].addEventListener('click', function () {
+
+            var elements = document.getElementsByClassName("mobile");
+            var formData = new FormData();
+
+            formData.append(elements[0].name, elements[0].value);
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                    if (xmlHttp.responseText == 'user') {
+                        alert('Number is already Registered...\nPlease Enter a New Phone Number..!!');
+                        //alert(xmlHttp.responseText);
+                    }
+                    else { not_verified(); }
+                }
+            }
+            xmlHttp.open("post", "ajax/mobile_otp.php");
+            xmlHttp.send(formData);
+        });
+
+        verify.style.display = 'none';
+        otp_send.style.display = 'none';
+        resend.style.display = 'none';
+
+        already[1].style.display = 'none';
+        already[2].style.display = 'none';
+        alrdy[0].style.display = 'none';
+        alrdy[1].style.display = 'none';
+
+        function not_verified() {
+            verifying[0].style.display = 'none';
+            verifying[1].style.display = 'none';
+
+            verify.style.display = 'flex';
+            otp_send.style.display = 'flex';
+            resend.style.display = 'flex';
+
+            const countdown = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    document.getElementById("timer").innerHTML = "";
+
+                } else {
+                    document.getElementById("timer").innerHTML = 'after ' + timeLeft + ' Sec';
+                }
+                timeLeft -= 1;
+            },
+                1000);
+
+        }
+        function verified() {
+            verifying[0].style.display = 'none';
+            verifying[1].style.display = 'flex';
+
+            verify.style.display = 'none';
+            otp_send.style.display = 'none';
+            resend.style.display = 'none';
+
+            already[1].style.display = 'flex';
+            already[2].style.display = 'flex';
+            alrdy[0].style.display = 'flex';
+            alrdy[1].style.display = 'flex';
+        }
+
+    </script>
+</body>
+
+</html>
